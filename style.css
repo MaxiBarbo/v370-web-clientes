@@ -551,3 +551,20 @@ footer .contact-line { margin:0; }
 /* El texto, el indicador sobre el título y las fotografías no cambian. */
 [data-theme=light] #proceso { --process-champagne:#90652C; }
 [data-theme=light] #proceso .process-layout .steps li.is-current::before { background:rgba(144,101,44,.08); }
+
+
+/* v370: acceso sutil para volver al inicio */
+.back-to-top {
+ position:fixed;right:20px;bottom:24px;z-index:1000;
+ display:grid;place-items:center;width:44px;height:44px;padding:0;
+ border:1px solid rgba(209,175,117,.65);border-radius:50%;
+ background:rgba(27,40,48,.92);color:#D1AF75;
+ box-shadow:0 4px 16px rgba(0,0,0,.16);backdrop-filter:blur(8px);
+ opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;
+ transition:opacity .25s ease,transform .25s ease,visibility .25s ease,background .25s ease;
+}
+.back-to-top.is-visible {opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover {background:#34444C}
+.back-to-top:focus-visible {outline:2px solid #D1AF75;outline-offset:3px}
+@media(max-width:600px) {.back-to-top {right:16px;bottom:calc(18px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce) {.back-to-top {transition:none}}

@@ -428,3 +428,17 @@ workshopFlip.addEventListener('click', () => {
  const showingInterior = workshopFlip.getAttribute('aria-pressed') === 'true';
  workshopFlip.setAttribute('aria-pressed', String(!showingInterior));
 });
+
+
+// v370: botón para volver al inicio
+(() => {
+ const button = document.getElementById('back-to-top');
+ if (!button) return;
+ const updateVisibility = () => button.classList.toggle('is-visible', window.scrollY > 350);
+ window.addEventListener('scroll', updateVisibility, {passive:true});
+ button.addEventListener('click', () => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0, behavior:reduceMotion ? 'instant' : 'smooth'});
+ });
+ updateVisibility();
+})();
