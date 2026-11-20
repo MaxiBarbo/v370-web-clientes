@@ -1,0 +1,27 @@
+# Configuración privada
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Dependencias y cachés
+node_modules/
+__pycache__/
+.venv/
+
+# Herramientas de desarrollo
+.vscode/
+.idea/
+
+# Archivos comprimidos
+*.zip
+*.rar
+*.7z

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glass" x2="1" y2="1">
+      <stop stop-color="#344851"/><stop offset=".55" stop-color="#111c22"/><stop offset="1" stop-color="#080d10"/>
+    </linearGradient>
+    <linearGradient id="metal" x2="0" y2="1">
+      <stop stop-color="#d5dde0"/><stop offset=".42" stop-color="#75878e"/><stop offset="1" stop-color="#202a31"/>
+    </linearGradient>
+    <linearGradient id="flex" x2="1" y2="1">
+      <stop stop-color="#3c3b37"/><stop offset="1" stop-color="#141c20"/>
+    </linearGradient>
+    <pattern id="pins" width="4" height="10" patternUnits="userSpaceOnUse">
+      <path d="M1.5 0v10" stroke="#e7ae52" stroke-width="2"/>
+    </pattern>
+    <filter id="shadow" x="-35%" y="-35%" width="170%" height="180%">
+      <feDropShadow dx="2" dy="6" stdDeviation="4" flood-opacity=".5"/>
+    </filter>
+    <g id="phone">
+      <rect x="-38" y="-58" width="76" height="116" rx="11" fill="url(#metal)"/>
+      <rect x="-35" y="-55" width="70" height="110" rx="9" fill="url(#glass)" stroke="#080c0f" stroke-width="2"/>
+      <path d="M-20-55h40l-3 7h-34z" fill="#080c0f"/>
+      <path d="M-5-52H5" stroke="#43545d" stroke-linecap="round"/>
+      <circle cx="11" cy="-52" r="1" fill="#547b97"/>
+    </g>
+  </defs>
+  <symbol id="pantalla" viewBox="0 0 200 150">
+    <g transform="translate(99 73) rotate(19)" filter="url(#shadow)">
+      <path d="M29 26h25v12H29z" fill="#413527"/>
+      <path d="M47 27h8v9h-8z" fill="url(#pins)"/>
+      <use href="#phone"/>
+    </g>
+  </symbol>
+  <symbol id="bateria" viewBox="0 0 200 150">
+    <g transform="translate(99 74) rotate(-13)" filter="url(#shadow)">
+      <path d="M-50 31h22v14h-22z" fill="#543b26"/>
+      <path d="M-50 32h10v10h-10z" fill="url(#pins)"/>
+      <rect x="-37" y="-57" width="74" height="114" rx="4" fill="url(#glass)" stroke="#080d10" stroke-width="2"/>
+      <path d="M-34 43H34v11h-68z" fill="#0b1114"/>
+      <path d="M0-30v10m-5-5H5M-4 25H4" fill="none" stroke="#d4e0e6" stroke-width="2" stroke-linecap="round"/>
+      <text x="0" y="4" text-anchor="middle" fill="#d4e0e6" font-size="10" font-family="sans-serif">Li-ion</text>
+      <path d="M-10 11H10M-7 15H7" stroke="#899aa4" stroke-width="1.5"/>
+    </g>
+  </symbol>
+  <symbol id="carga" viewBox="0 0 200 150">
+    <g filter="url(#shadow)">
+      <path d="M128 18h43v21h-13v15c0 12-9 18-21 25-12 7-18 12-18 23v10H97V96c0-16 9-24 24-33 10-6 15-9 15-17v-7h-8z" fill="url(#flex)" stroke="#131a1f"/>
+      <rect x="132" y="22" width="35" height="10" fill="url(#pins)"/>
+      <path d="M42 103h23l6 5h39l8-5h24v22h-18l-7-5H65l-6 5H42z" fill="#242e33" stroke="#11181b"/>
+      <circle cx="47" cy="112" r="6" fill="#c69150"/><circle cx="47" cy="112" r="3" fill="#242e33"/>
+      <circle cx="136" cy="115" r="6" fill="#c69150"/><circle cx="136" cy="115" r="3" fill="#242e33"/>
+      <rect x="70" y="106" width="47" height="20" rx="6" fill="url(#metal)"/>
+      <rect x="76" y="112" width="35" height="8" rx="4" fill="#10191e"/>
+      <path d="M83 116h21M54 105h8m-8 13h8" stroke="#c79555" stroke-width="1.5"/>
+    </g>
+  </symbol>
+  <symbol id="mantenimiento" viewBox="0 0 200 150">
+    <g transform="rotate(-12 96 95)" filter="url(#shadow)">
+      <rect x="7" y="52" width="176" height="57" rx="16" fill="url(#metal)"/>
+      <rect x="9" y="49" width="172" height="45" rx="16" fill="url(#glass)" stroke="#0b1013" stroke-width="2"/>
+      <rect x="78" y="96" width="38" height="9" rx="4.5" fill="#0a1014"/>
+      <path d="M41 101h25m61 0h25" stroke="#111b20" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 6"/>
+    </g>
+    <g transform="rotate(36 153 81)" filter="url(#shadow)">
+      <rect x="147" y="14" width="13" height="58" rx="6" fill="url(#metal)"/>
+      <path d="M147 64h13l8 37q-14 9-28 0z" fill="#161d20" stroke="#36434a"/>
+      <path d="M150 69l-5 32m8-32v34m3-34 6 32" stroke="#526168" opacity=".65"/>
+    </g>
+  </symbol>
+  <symbol id="software" viewBox="0 0 200 150">
+    <g transform="translate(99 73) rotate(-8)" filter="url(#shadow)">
+      <use href="#phone"/>
+      <circle cy="-15" r="10" fill="none" stroke="#54d8f7" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+      <rect x="-23" y="10" width="46" height="4" rx="2" fill="#405562"/>
+      <rect x="-23" y="10" width="34" height="4" rx="2" fill="#54d8f7"/>
+      <text y="29" text-anchor="middle" fill="#e2f2f7" font-family="sans-serif" font-size="9">72%</text>
+    </g>
+  </symbol>
+  <symbol id="diagnostico" viewBox="0 0 200 150">
+    <g filter="url(#shadow)">
+      <path d="M133 81h28c25 0 29 18 12 24l-12 4" fill="none" stroke="#141d23" stroke-width="4"/>
+      <path d="M133 80h28c25 0 29 18 12 24l-12 4" fill="none" stroke="#697b83" stroke-width="1"/>
+      <path d="M30 42q0-4 5-5l96-11q5 0 5 5v56L30 99z" fill="#172329" stroke="#a2b0b6"/>
+      <path d="M36 45l94-11v47L36 92z" fill="url(#glass)"/>
+      <path d="M30 98l107-12-14 23L12 122q-5 0-3-4z" fill="url(#metal)" stroke="#111a20"/>
+      <path d="M36 99l83-9-8 12-86 10z" fill="#162228"/>
+      <path d="M54 105l38-4m-28 8 29-3" stroke="#71828a" stroke-dasharray="3 2"/>
+      <path d="M49 60l-5 5 5 4m9-10 5 4-5 5m13-10 32-4m-32 11 44-5m-44 12 26-3" fill="none" stroke="#54d8f7" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="118" cy="44" r="4" fill="#62d79a"/>
+      <g transform="translate(149 117) rotate(32) scale(.35 .39)">
+        <use href="#phone"/>
+        <path d="M0-16v35m0-14-10-9m10 17 10-9m-13-17 3-4 3 4" fill="none" stroke="#e5f4f9" stroke-width="3" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </symbol>
+</svg>
